@@ -147,16 +147,16 @@ $app
 
 // Project
 
-$app
-    ->get(
-        '/project/{id}',
-        function($request, $response, $arguments)
-        {
-            // Fetch project
-            $prepare = $this->db->prepare(
-                'SELECT * FROM projects WHERE id = :id LIMIT 1'
-            );
-            $prepare->bindValue('id', $arguments['id']);
-            $prepare->execute();
-            $project = $prepare->fetch();
-    )
+// $app
+//     ->get(
+//         '/project/{id}',
+//         function($request, $response, $arguments)
+//         {
+//             // Fetch project
+//             $prepare = $this->db->prepare(
+//                 'SELECT * FROM projects WHERE id = :id LIMIT 1'
+//             );
+//             $prepare->bindValue('id', $arguments['id']);
+//             $prepare->execute();
+//             $project = $prepare->fetch();
+//     )
